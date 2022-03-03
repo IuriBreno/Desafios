@@ -10,21 +10,19 @@ public class Main {
 	        int qtsPcsQuebrados = leitor.nextInt();
 	        int qtsPcsSemComp = leitor.nextInt();
 	        
-	        int numPcBom = numPc - qtsPcsQuebrados;
-	        numPcBom -= 1;
+	        int numPcBom = numPc - qtsPcsQuebrados - qtsPcsSemComp;
+	        //numPcBom -= 1;
 	        
 	        int metade = qtsPcsSemComp/2;
 	        
-	        if (numPcBom < numAlunos) {
-	            
-	            System.out.println("Igor bolado!");
-
-	             } else {
-	                 if (qtsPcsQuebrados > metade)
-	                     System.out.println("Caio, a culpa eh sua!");
-	                 else
-	                     System.out.println("Igor feliz!");
-	             }
+	        if (numPcBom > numAlunos) {
+	    		System.out.println("Igor feliz!");
+	    	} else {
+	    		if (qtsPcsQuebrados > metade)
+	    			System.out.println("Caio, a culpa eh sua!");
+	    		else
+	    			System.out.println("Igor bolado!");
+	    	}
 	    }
 	
 }
